@@ -13,7 +13,7 @@ However, if I were to do it right, I'd use a gem such as `apartment` or write a 
 ### Setup
 
 ```
-git clone git@github.com:blizkreeg/newrelic_vineet
+git clone git@github.com:blizkreeg/newrelic_vineet.git
 cd newrelic_vineet
 bundle install
 bundle exec rake db:create
