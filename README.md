@@ -2,9 +2,9 @@
 
 ### Assumptions
 
-Ruby - 2.2.3
-Rails - 4.2
-Postgres
+* Ruby - 2.2.3
+* Rails - 4.2
+* Postgres
 
 To keep it simple, there is a `org_id` column in the `events` table to support multi-tenancy.
 
@@ -25,7 +25,7 @@ bundle exec rake db:seed (this creates a few orgs and fake events)
 
 There is a `POST create` service API to create/store a new event. A test for this can be found in `spec/controllers/events_controller_spec.rb`.
 
-### odels
+### Models
 
 ```
 Org
