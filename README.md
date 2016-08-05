@@ -6,10 +6,11 @@
 * Rails - 4.2
 * Postgres
 
-To keep it simple, there is a `org_id` column in the `events` table to support multi-tenancy.
+#### A word about multi-tenancy in the app
 
-However, if I were to do it right, I'd use a gem such as `apartment` or write a custom implementation of true multi-tenancy, which would either store org records in different databases or separate schemas (if Postgres)
+To keep it simple, there is a `org_id` column in the `events` table for multi-tenancy. I made the scopes such that they require an `org` argument. I understand that this isn't ideal (or anywhere close to what I'd do in production) - for one, it leaves much room for error (someone may forget to code an org requirement and return the wrong records).
 
+If I had time and were to do it right, I'd use a gem such as `apartment` or write a custom implementation of true multi-tenancy, which would either store different org records in different databases or in separate schemas (if Postgres) to achieve a more fool-proof separation of data per tenant.
 ### Setup
 
 ```
